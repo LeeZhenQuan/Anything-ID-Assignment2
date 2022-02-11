@@ -1,26 +1,35 @@
-.login-page {
-  top: 180px;
-  position: absolute;
-  width: 280px;
-  transition: 0.5s;
-}
-.input-field {
-  width: 100%;
-  padding: 10px 0;
-  margin: 5px 0;
-  border-left: 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 1px solid;
-  outline: none;
-  background: transparent;
-}
-.submit-btn {
-  width: 85%;
-  padding: 10px 30px;
-  cursor: pointer;
-  display: block;
+.login {
+  width: 382px;
+  overflow: hidden;
   margin: auto;
+  margin: 20 0 0 450px;
+  padding: 80px;
+  background: wheat;
+  border-radius: 15px;
+}
+
+label {
+  color: black;
+  font-size: 17px;
+}
+
+#UserName,
+#Password {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+
+.submit-btn {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 17px;
+  padding-left: 7px;
+  color: yellow;
+  background-color: black;
 }
 .container1 {
   display: flex;
