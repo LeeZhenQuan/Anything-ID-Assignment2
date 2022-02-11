@@ -104,11 +104,13 @@ $(document).ready(function () {
     .on("click", ".delete", function(e) {
       e.preventDefault();
       const id = $(this).data("id");
-  
       deletee(id);
   }
   );
-    
+    $(".login-page").submit(function(e){
+      e.preventDefault();
+      validation();
+    });
     $("#update-contact-submit").on("click", function (e) {
       e.preventDefault();
       let xName = $("#update-xName").val();
@@ -119,8 +121,8 @@ $(document).ready(function () {
   
       updateForm(contactId, xName, xEmail, xPassword, xMemberPlan);
     });
-
-    function updateForm(id, name, mentor, sid, zlass, age, gender) {
+//This Put is for changing membership plan to true
+    function updateForm(id, name, password, memberPlan) {
   
       var jsondata = { "xName": name,
        "xEmail": email, "xPassword": password, 
@@ -147,22 +149,40 @@ $(document).ready(function () {
         getContacts();
       });
     }
-    function deletee(id){
-      var settings = {
+
+    function validation(username, password)
+    {
+      let settings = {
         "async": true,
         "crossDomain": true,
-        "url": `https://interectivedev-13c7.restdb.io/rest/contact/${id}`,
-        "method": "DELETE",
+        "url": "https://interectivedev-13c7.restdb.io/rest/contact",
+        "method": "GET",
         "headers": {
           "content-type": "application/json",
           "x-apikey": APIKEY,
           "cache-control": "no-cache"
-        }
+        },
       }
-      
+  
       $.ajax(settings).done(function (response) {
         console.log(response);
-        getContacts();
+        var username = document.getElementById("UserName").value;
+        var password= document.getElementById("Password").value;
+        let login = false;
+        for (let i = 0; i < response.length; i++) {
+          const element = response[i];
+          const xName = element.xName;
+          const xPassword = element.xPassword;
+          if(username == xName && password == xPassword)
+          {
+            alert("login Successfully")
+            login = true;
+            location.href = "Home.html";
+          }
+        }
+        if (login == false) {
+          alert("fuck you enter correct stuff");
+        }
       });
     }
     
