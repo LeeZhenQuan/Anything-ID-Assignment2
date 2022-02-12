@@ -1,3 +1,8 @@
+setTimeout(myFunction, 30000);
+
+function myFunction(){
+  window.location.href = "Home.html";
+}
 $(document).ready(function () {
     const APIKEY = "61d29385ccd0211b3208956e";
     getContacts();
