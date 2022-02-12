@@ -42,3 +42,20 @@ label {
   flex-direction: column;
   padding: 2%;
 }
+.bg-blue {
+  background: #15386394;
+}
+.animation-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  top: -50px;
+  position: relative;
+  font-style: italic;
+}
