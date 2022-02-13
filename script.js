@@ -182,7 +182,7 @@ $(document).ready(function () {
           {
             alert("login Successfully")
             login = true;
-            location.href = "Home.html";
+            location.href = "index.html";
           }
         }
         if (login == false) {
