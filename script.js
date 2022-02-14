@@ -192,4 +192,11 @@ $(document).ready(function () {
     }
     
   })
+  function myFunction3() {
+    document.getElementById("demo").innerHTML = "Hello Dear Visitor! Thank you for sending the email I wil get back to you shortly </br>"}
+    
+function sendEmail() 
+    {
+        window.location = "mailto:BetaID.NP@gmail.com?subject=Important! From Music website";
+    }
   
