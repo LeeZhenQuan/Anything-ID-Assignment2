@@ -20,7 +20,8 @@ $(document).ready(function () {
         "xMemberPlan": false,
         "xAddress": "Null",
         "xCard": "Null",
-        "xPostalCode": "Null"
+        "xPostalCode": "Null",
+        "xMembershipType": "Null"
       };
       let settings = {
         "async": true,
