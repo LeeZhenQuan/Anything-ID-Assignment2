@@ -1,9 +1,6 @@
-setTimeout(myFunction, 30000);
 
-function myFunction(){
-  window.location.href = "home2.html";
-}
 $(document).ready(function () {
+  $('#loading').hide();
     const APIKEY = "61d29385ccd0211b3208956e";
     getContacts();
     $("#update-contact-container").hide();
@@ -184,7 +181,9 @@ $(document).ready(function () {
         console.log(response);
       });
     }
-
+    function showlottie(){
+      $('#loading').show();
+    }
     function validation(username, password)
     {
       let settings = {
@@ -197,6 +196,7 @@ $(document).ready(function () {
           "x-apikey": APIKEY,
           "cache-control": "no-cache"
         },
+        "beforeSend":showlottie()
       }
       $.ajax(settings).done(function (response) {
         console.log(response);
@@ -224,6 +224,7 @@ $(document).ready(function () {
         }
         if (login == false) {
           alert("Invalid Username Or Password!");
+          location.href="login.html";
         }
       });
     }
@@ -234,4 +235,7 @@ function myFunction3() {
 function sendEmail() {
   window.location = "mailto:BetaID.NP@gmail.com?subject=Important! From Music website";
 }
+
+
+
   
