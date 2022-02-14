@@ -1,7 +1,7 @@
 setTimeout(myFunction, 30000);
 
 function myFunction(){
-  window.location.href = "index.html";
+  window.location.href = "home2.html";
 }
 $(document).ready(function () {
     const APIKEY = "61d29385ccd0211b3208956e";
@@ -21,6 +21,9 @@ $(document).ready(function () {
         "xEmail": email,
         "xPassword": password,
         "xMemberPlan": false,
+        "xAddress": "Null",
+        "xCard": "Null",
+        "xPostalCode": "Null"
       };
   
       let settings = {
@@ -53,7 +56,6 @@ $(document).ready(function () {
     });
   
     function getContacts(limit = 10, all = true) {
-  
       let settings = {
         "async": true,
         "crossDomain": true,
@@ -65,11 +67,8 @@ $(document).ready(function () {
           "cache-control": "no-cache"
         },
       }
-  
       $.ajax(settings).done(function (response) {
-        
         let content = "";
-  
         for (var i = 0; i < response.length && i < limit; i++) {
           content = `${content}<tr id='${response[i]._id}'>
           <td>${response[i].xName}</td>
@@ -82,14 +81,11 @@ $(document).ready(function () {
           data-email='${response[i].xEmail}' data-password='${response[i].xPassword}' 
           data-memberPlan='${response[i].xMemberPlan}'>Update</a></td></tr>`;
         }
-
         $("#contact-list tbody").html(content);
         $("#total-contacts").html(response.length);
       });
-  
-  
     }
-  
+    // delete this before submit
     $("#contact-list").on("click", ".update", function (e) {
       e.preventDefault();
       let xName = $(this).data("name");
@@ -106,32 +102,36 @@ $(document).ready(function () {
       $("#update-contact-container").show();
   
     })
-    .on("click", ".delete", function(e) {
-      e.preventDefault();
-      const id = $(this).data("id");
-      deletee(id);
-  }
-  );
-    $(".login-page").submit(function(e){
+    //login page
+    $(".login").submit(function(e){
       e.preventDefault();
       validation();
     });
-    $("#update-contact-submit").on("click", function (e) {
+    //update membership
+    $("#purchase").submit(function (e) {
+      console.log("fuck");
       e.preventDefault();
-      let xName = $("#update-xName").val();
-      let xEmail = $("#update-xEmail").val();
-      let xPassword = $("#update-xPassword").val();
-      let xMemberPlan = $("#update-xMemberPlan").val();
-      let contactId = $("#update-contact-id").val();
-  
-      updateForm(contactId, xName, xEmail, xPassword, xMemberPlan);
+      let xName = sessionStorage.getItem("Name");
+      let xEmail = sessionStorage.getItem("Email");
+      let xPassword = sessionStorage.getItem("Password");
+      let xAddress = $("#address").val();
+      let xPostalCode= $("#postalcode").val();
+      let xCard = $("#card").val()
+      let contactId = sessionStorage.getItem("id");
+      updateForm(contactId, xName, xEmail, xPassword, xAddress, xPostalCode, xCard);
     });
 //This Put is for changing membership plan to true
-    function updateForm(id, name, password, memberPlan) {
-  
-      var jsondata = { "xName": name,
-       "xEmail": email, "xPassword": password, 
-       "xMemberPlan": memberPlan};
+    function updateForm(id,name, email, password, address,postalcode,card) {
+      console.log("fuck");
+      var jsondata = { 
+        "xName": name,
+        "xPassword": password,
+        "xEmail": email,
+        "xMemberPlan": true,
+        "xAddress": address,
+        "xCard": card, 
+        "xPostalCode": postalcode
+      };
        
       var settings = {
         "async": true,
@@ -178,22 +178,24 @@ $(document).ready(function () {
           const element = response[i];
           const xName = element.xName;
           const xPassword = element.xPassword;
+          sessionStorage.setItem("id",element._id);
+          sessionStorage.setItem("Name",element.xName);
+          sessionStorage.setItem("Email",element.xEmail);
+          sessionStorage.setItem("Password",element.xPassword);
           if(username == xName && password == xPassword)
           {
-            alert("login Successfully")
             login = true;
-            location.href = "index.html";
+            location.href = "home2.html";
           }
         }
         if (login == false) {
-          alert("fuck you enter correct stuff");
         }
       });
     }
     
   })
-  function myFunction3() {
-    document.getElementById("demo").innerHTML = "Hello Dear Visitor! Thank you for sending the email I wil get back to you shortly </br>"}
+function myFunction3() {
+  document.getElementById("demo").innerHTML = "Hello Dear Visitor! Thank you for sending the email I wil get back to you shortly </br>"}
     
 function sendEmail() 
     {
