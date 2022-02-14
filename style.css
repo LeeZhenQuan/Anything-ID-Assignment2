@@ -83,23 +83,3 @@ label {
   background-color: #04aa6d;
   color: white;
 }
-
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: aqua;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
