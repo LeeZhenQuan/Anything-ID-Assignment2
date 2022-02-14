@@ -59,8 +59,7 @@ label {
   position: relative;
   font-style: italic;
 }
-.navdesign,
-.navdesign1 {
+.navdesign {
   overflow: hidden;
   background-color: #333;
 }
@@ -74,24 +73,13 @@ label {
   font-size: 17px;
   font-family: "Roboto", sans-serif;
 }
-.navdesign1 a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: "Roboto", sans-serif;
-}
 
-.navdesign a:hover,
-.navdesign1 a:hover {
+.navdesign a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.navdesign a.active,
-.navdesign1 a.active {
+.navdesign a.active {
   background-color: #04aa6d;
   color: white;
 }
