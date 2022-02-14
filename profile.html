@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+	 crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    
+    <div class="form" id="update-contact">
+        <form id="update-form">
+            <div class="form-group">
+                <label for="xName">Name</label>
+                <input type="text" id="xName" class="form-control" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="xEmail">Email</label>
+                <input type="text" id="xEmail" class="form-control" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="xPassword">Password</label>
+                <input type="text" id="xPassword" class="form-control" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="xAddress">Address</label>
+                <input type="text" id="xAddress" class="form-control" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="xCard">Credit Card</label>
+                <input type="text" id="xCard" class="form-control" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="xPostalCode">Postal Code</label>
+                <input type="text" id="xPostalCode" class="form-control" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="xMemberShipType">MembershipType</label>
+                <input type="text" id="xMemberShipType" class="form-control" required disabled>
+            </div>
+            <div class="form-group">
+                <label for="xMembership">MemberShip</label>
+                <input type="text" id="xMembership" class="form-control" required disabled>
+            </div>
+            <input type ="button" value="Update" class="btn btn-primary" id="unlock-update">    
+            <input type="submit" value="Submit" class="btn btn-primary" id="update-submit">
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src = "script.js"></script>
 </body>
 </html>
