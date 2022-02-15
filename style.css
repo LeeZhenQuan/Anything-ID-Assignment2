@@ -149,19 +149,13 @@ label {
 #loading lottie-player {
   z-index: 100;
 }
-
-.label1,
-.input-field1 {
+#purchase {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  clear: both;
-  float: left;
-  margin-right: 5px;
+  flex-direction: column;
+  width: 35%;
+  padding: 2%;
 }
-
 #Buy-Me {
-  width: 10%;
   height: 30px;
   border: none;
   border-radius: 17px;
@@ -169,13 +163,6 @@ label {
   color: yellow;
   background-color: black;
 }
-
-#purchase {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .container2 {
   text-align: center;
   width: auto;
@@ -236,7 +223,7 @@ label {
   .login,
   .UserName,
   .Password,
-  .purchase {
+  #purchase {
     flex-wrap: wrap;
     flex-direction: column;
     width: auto;
