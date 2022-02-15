@@ -1,5 +1,12 @@
-* {
+h1,
+h2,
+h3 {
   font-family: "Roboto", sans-serif;
+}
+p,
+li {
+  font-family: "Dongle", sans-serif;
+  font-size: 20px;
 }
 body {
   background-image: url("bg.jfif");
@@ -12,13 +19,13 @@ body {
   margin: auto;
   margin: 20 0 0 450px;
   padding: 80px;
-  background: wheat;
+  background: transparent;
   border-radius: 15px;
 }
 
 label {
   color: black;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 #UserName,
@@ -32,7 +39,7 @@ label {
 
 .submit-btn,
 .r-btn {
-  width: 95%;
+  width: 78%;
   height: 30px;
   border: none;
   border-radius: 17px;
@@ -41,17 +48,19 @@ label {
   background-color: black;
 }
 
-.container1 {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  text-align: center;
-}
+.container1,
 .split1 {
   flex-basis: 45%;
   display: flex;
   flex-direction: column;
   padding: 2%;
+  text-align: center;
+}
+.split2 {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  padding: 0%;
   text-align: center;
 }
 .bg-blue {
@@ -142,11 +151,13 @@ label {
 }
 
 .label1,
-.input-field {
+.input-field1 {
+  display: flex;
+  justify-content: center;
   text-align: center;
   clear: both;
   float: left;
-  margin-right: 15px;
+  margin-right: 5px;
 }
 
 #Buy-Me {
@@ -158,13 +169,13 @@ label {
   color: yellow;
   background-color: black;
 }
+
 #purchase {
   display: flex;
   justify-content: center;
-  margin: 20 0 0 450px;
-  padding: 80px;
-  background: wheat;
+  flex-direction: column;
 }
+
 .container2 {
   text-align: center;
   width: auto;
@@ -183,7 +194,6 @@ label {
   background-color: #4caf50;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
 }
 
 .button1:hover {
@@ -201,4 +211,36 @@ label {
 #ch1 {
   display: flex;
   justify-content: center;
+}
+.picrow {
+  display: flex;
+  justify-content: center;
+  padding: 0%;
+}
+
+.piccolumn {
+  padding: 5%;
+  justify-content: center;
+}
+.pic-con {
+  background: white;
+  padding: 5%;
+}
+.profile-con {
+  padding: 5%;
+}
+.profile-h2 {
+  padding: 2%;
+}
+@media (max-width: 576px) {
+  .login,
+  .UserName,
+  .Password,
+  .purchase,
+  .pic-con,
+  .piccolumn {
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: auto;
+  }
 }
