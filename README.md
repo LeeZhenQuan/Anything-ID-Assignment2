@@ -1,4 +1,7 @@
 # Anything-ID-Assignment2
+
+# Link to run the website in Github 
+https://leezhenquan.github.io/Anything-ID-Assignment2/
 # Idea 
 We have chosen to do Possible Theme 1: eCommerce. 
 We will be creating an music subscription website which will have loading.html where it will have lottie animation before transferring to the index.html as our main page. Inside the main home page it will have diffrent subscription plan availabe for user to choose from. All the start of all webpage will have nav bar to link to other html pages. There will be a total of 5 html in this assignment which inculde loading.html having lottie animation, index.html with infrmation about the webpage and subscription plan, login.html for logging into the system, Register.html for register an account for it and storing all deatil in the databse using RestDB, membership.html containing all the user membership information. Some Lottie animation will be added into the webpage to make it more interactive.
