@@ -43,7 +43,6 @@ $(document).ready(function () {
         $("#add-update-msg").show().fadeOut(3000);
         getContacts();
       });
-
     });
     function getContacts(limit = 10, all = true) {
       let settings = {
@@ -75,22 +74,6 @@ $(document).ready(function () {
         $("#total-contacts").html(response.length);
       });
     }
-    // delete this before submit
-    $("#contact-list").on("click", ".update", function (e) {
-      e.preventDefault();
-      let xName = $(this).data("name");
-      let xEmail = $(this).data("email");
-      let xPassword = $(this).data("password");
-      let xMemberPlan = $(this).data("memberPlan");
-      let contactId = $(this).data("id");
-
-      $("#update-xName").val(xName);
-      $("#update-xEmail").val(xEmail);
-      $("#update-xPassword").val(xPassword);
-      $("#update-xMemberPlan").val(xMemberPlan);
-      $("#update-contact-id").val(contactId);
-      $("#update-contact-container").show();
-    })
     //login page
     $(".login").submit(function(e){
       e.preventDefault();
