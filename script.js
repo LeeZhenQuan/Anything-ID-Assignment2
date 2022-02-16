@@ -2,7 +2,6 @@
 $(document).ready(function () {
   $('#loading').hide();
     const APIKEY = "61d29385ccd0211b3208956e";
-    getContacts();
     $("#update-contact-container").hide();
     $("#add-update-msg").hide();
     $("#contact-submit").on("click", function (e) {
@@ -41,39 +40,9 @@ $(document).ready(function () {
         console.log(response);
         $("#contact-submit").prop( "disabled", false);
         $("#add-update-msg").show().fadeOut(3000);
-        getContacts();
       });
     });
-    function getContacts(limit = 10, all = true) {
-      let settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://interectivedev-13c7.restdb.io/rest/contact",
-        "method": "GET",
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-        },
-      }
-      $.ajax(settings).done(function (response) {
-        let content = "";
-        for (var i = 0; i < response.length && i < limit; i++) {
-          content = `${content}<tr id='${response[i]._id}'>
-          <td>${response[i].xName}</td>
-          <td>${response[i].xEmail}</td>
-          <td>${response[i].xPassword}</td>
-          <td>${response[i].xMemberPlan}</td>
-          <td><a href='#' class='delete' data-id='${response[i]._id}'>Del</a></td>
-          <td><a href='#update-contact-container' class='update' 
-          data-id='${response[i]._id}' data-name='${response[i].xName}' 
-          data-email='${response[i].xEmail}' data-password='${response[i].xPassword}' 
-          data-memberPlan='${response[i].xMemberPlan}'>Update</a></td></tr>`;
-        }
-        $("#contact-list tbody").html(content);
-        $("#total-contacts").html(response.length);
-      });
-    }
+
     //login page
     $(".login").submit(function(e){
       e.preventDefault();
