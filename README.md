@@ -3,10 +3,32 @@
 We have chosen to do Possible Theme 1: eCommerce. 
 We will be creating an music subscription website which will have loading.html where it will have lottie animation before transferring to the index.html as our main page. Inside the main home page it will have diffrent subscription plan availabe for user to choose from. All the start of all webpage will have nav bar to link to other html pages. There will be a total of 5 html in this assignment which inculde loading.html having lottie animation, index.html with infrmation about the webpage and subscription plan, login.html for logging into the system, Register.html for register an account for it and storing all deatil in the databse using RestDB, membership.html containing all the user membership information. Some Lottie animation will be added into the webpage to make it more interactive.
 
-# Testing done so far
+# Testing done so far 13/Feb 2022
 Tested out registarion.html to store information from user input to RestDB
 Retrieving data from REstDB for login.html
 Lottie animation working in loading.html
+
+# Design Process
+
+By having creatig the Wireframe design it help us to visualize the design the the flow for the webpage.
+
+In this Project I have inculde "CSS" folder , "Image" folder, "Javascript" folder and "Wireframe" folder.
+
+You can locate and view my wireframe design in the "Wireframe" folder, which has all of the designs for how I wanted my webpages to be laid up.
+
+My stylesheet may be found in the "CSS" folder, which aids in the design of websites which include normalize.css that help to set everything to default follow by using styles.css to utilizing my own styles that I wanted.
+
+In the "Image" folder which inculde the icon image from spotify websites.
+
+Finally, under the "Javascript" folder is the Javascript code which will run for login.html, RegisterPage.html, login.html and membership.html to membership-4.html
+# Features
+On the top of every html page, there will be a navigation bar.
+A introduction of the website can be found in index.html.
+home2.html is when users sucessfully login from login.html from there when user click on subscribe they will not be redirected to the login.html page again but will be redirected to membership.html depending on which plan they chose.
+Registerpage.html and login.html uses restdb to store and verify the data through the use of javascript.
+contact.html include a button for user to click on it and the windown mail application will be launch and user just have to type their message in the box below. 
+
+
 
 # Technologies Used
 
@@ -27,7 +49,35 @@ CSS is used to style the websites in this project.
 # Javascript
 To make DOM manipulation easier, the project employs Javascript.
 
+# Bootstrap
+Bootstrap is a framework that makes it easier and faster to create websites. It offers design templates for typography, forms, buttons, tables, navigation, modals, picture carousels, and more that are based on HTML and CSS. It also allows you to use JavaScript plug-ins.
+The responsive CSS in Bootstrap adapts for phones, tablets, and desktops.
+https://getbootstrap.com/
+
+# RestDb
+Simple online NoSQL database backend with automatic APIs and low code javascript hooks.
+Simple to use, User friendly, Free plan for teams, More than a database. Use HTML, Javascript, jQuery, Angular, ReactJS (or your favorite framework) on restdb.io Pages with server-side data-binding. Add your own secure domains for the web pages and the REST API.
+https://restdb.io/
+
 # Credits
 Nav bar
 The design and layout were obtained from https://www.w3schools.com/howto/howto_js_topnav.asp
 
+Lottie animation
+The Loading animation were obtained from lottie repo by vinay kurve (https://lottiefiles.com/78259-loading)
+
+Background image
+By: Annie Spratt
+https://unsplash.com/photos/0ZPSX_mQ3xI
+
+index content, home2, membership, images for the icon
+The information use were obtained from https://www.spotify.com/sg-en/premium/ 
+
+Tutorial week 12 CA using RestDb and registration
+
+# Acknowledgements
+Button (Email Me) contact.html
+I have took reference from 
+https://www.geeksforgeeks.org/html-dom-input-email-object/
+https://www.w3schools.com/tags/ev_onclick.asp
+https://css-tricks.com/all-about-mailto-links/
