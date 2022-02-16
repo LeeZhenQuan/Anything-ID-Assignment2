@@ -164,7 +164,7 @@ label {
   width: 100%;
 }
 .card.c1 {
-  height: 50%;
+  height: 100%;
   width: 100%;
 }
 
@@ -242,12 +242,17 @@ label {
     flex-direction: column;
     width: auto;
   }
-  @media (max-width: 576px) {
-    .pic-con,
-    .piccolumn,
-    .picrow {
-      flex-direction: column;
-      display: flex;
-    }
+  .pic-con,
+  .piccolumn,
+  .picrow {
+    flex-direction: column;
+    display: flex;
+  }
+  .m-con {
+    flex-direction: column;
+    padding: 5%;
+  }
+  .login {
+    padding-left: 15%;
   }
 }
