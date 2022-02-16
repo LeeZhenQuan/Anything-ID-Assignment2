@@ -17,7 +17,6 @@ body {
   width: 382px;
   overflow: hidden;
   margin: auto;
-  margin: 20 0 0 450px;
   padding: 80px;
   background: transparent;
   border-radius: 15px;
@@ -150,12 +149,27 @@ label {
   z-index: 100;
 }
 #purchase {
-  display: flex;
-  flex-direction: column;
-  width: 35%;
-  padding: 2%;
+  overflow: hidden;
+  margin: auto;
+  padding: 20px;
+  background: transparent;
+  border-radius: 15px;
 }
+.m-con {
+  display: flex;
+  padding: 0 20%;
+  padding-top: 60px;
+}
+.input-field1 {
+  width: 100%;
+}
+.card.c1 {
+  height: 50%;
+  width: 100%;
+}
+
 #Buy-Me {
+  width: 30%;
   height: 30px;
   border: none;
   border-radius: 17px;
