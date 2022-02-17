@@ -215,6 +215,7 @@ label {
 }
 
 #p1,
+#p2,
 #demo,
 #ch1 {
   display: flex;
