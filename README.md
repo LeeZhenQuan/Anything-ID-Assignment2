@@ -2,11 +2,18 @@
 
 # Link to run the website in Github 
 https://leezhenquan.github.io/Anything-ID-Assignment2/
+
+# Video Recording
+Notes only NP account can access and view it.
+If the video is not loading or is very slow you can download the video to watch
+duration is 7 min 50 sec
+https://drive.google.com/file/d/1UO_N1chewMLWS7TKUulgjUOlUwjymv32/view?usp=sharing
+
 # Idea 
 We have chosen to do Possible Theme 1: eCommerce. 
-We will be creating an music subscription website which will have loading.html where it will have lottie animation before transferring to the index.html as our main page. Inside the main home page it will have diffrent subscription plan availabe for user to choose from. All the start of all webpage will have nav bar to link to other html pages. There will be a total of 5 html in this assignment which inculde loading.html having lottie animation, index.html with infrmation about the webpage and subscription plan, login.html for logging into the system, Register.html for register an account for it and storing all deatil in the databse using RestDB, membership.html containing all the user membership information. Some Lottie animation will be added into the webpage to make it more interactive.
+We will be creating an music subscription website which will have index.html as our main page. Inside the main home page it will have diffrent subscription plan availabe for user to choose from. At the start of all webpage will have nav bar to link to other html pages. There will be a total of 11 html in this assignment which inculde login.html having lottie animation when the page is loading, index.html with information about the webpage and subscription plan, login.html for logging into the system, RegisterPage.html for register an account for it and storing all details in the database using RestDB, membership.html containing the plan information which diffrent plan will be at diffrent membership.html such as Individual at membership.html, Duo at membership-2.html, Familyat membership-3.html and Student at membership-4.html
 
-# Testing done so far 13/Feb 2022
+# Testing done so far 13/Feb  (3rd Checkpoint)
 Tested out registarion.html to store information from user input to RestDB
 Retrieving data from REstDB for login.html
 Lottie animation working in loading.html
