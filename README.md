@@ -91,3 +91,22 @@ I have took reference from
 https://www.geeksforgeeks.org/html-dom-input-email-object/
 https://www.w3schools.com/tags/ev_onclick.asp
 https://css-tricks.com/all-about-mailto-links/
+
+# Contribution
+
+Shao Ye:
+Wireframe
+login.html
+RegisterPage.html
+profile.html
+Testing_Plan.xlsx
+Javascript
+
+Zhen Quan:
+index.html
+home2.html
+contact.html
+contact2.html
+membership.html - membership-4.html
+Css
+Javascript (loading of lottie animation, Email button function)
