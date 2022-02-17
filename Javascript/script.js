@@ -3,7 +3,6 @@ $(document).ready(function () {
   $('#loading').hide();
     const APIKEY = "61d29385ccd0211b3208956e";
     $("#update-contact-container").hide();
-    $("#add-update-msg").hide();
     $("#contact-submit").on("click", function (e) {
       e.preventDefault();
       let name = $("#xName").val();
